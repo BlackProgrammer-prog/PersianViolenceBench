@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+root: ..
+input: data/normalized/benchmark_samples.jsonl
+sources: data/normalized/benchmark_sources.jsonl
+taxonomy: configs/taxonomy.yaml
+prompt: configs/prompts/violence_classifier_v3.txt
+prompt_version: violence-classifier-1.3.0
+output: runs/phase3
+cache: runs/phase3/cache
+database: data/nexoradb
+rules_annotations: data/extracted/annotations.jsonl
+seed: 20261024
+requests_per_minute: 18.0
+low_confidence_threshold: 0.7
+source_violence_categories:
+  strongreject: [Violence]
+  harmbench: []

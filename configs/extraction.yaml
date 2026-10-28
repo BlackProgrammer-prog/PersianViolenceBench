@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+root: ..
+input: data/normalized/benchmark_samples.jsonl
+taxonomy: configs/taxonomy.yaml
+output: data/extracted
+backend: rules
+method_frozen: true
+rules_version: rules-1.0.0
+batch_size: 32
+concurrency: 2
+duplicates:
+  unicode_form: NFKC
+  whitespace: true
+  casefold: true
+llm:
+  provider: null
+  model: null
+  model_version: null
+  endpoint: null
+  credential_env: PVB_LLM_API_KEY
+  prompt: configs/prompts/violence_classifier_v1.txt
+  temperature: 0.0
+  timeout: 60.0
+  retries: 2
+  requests_per_minute: 30.0

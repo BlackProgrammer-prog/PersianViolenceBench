@@ -1,0 +1,22 @@
+schema_version: 1.0.0
+# Paths are relative to the configuration file's parent directory.
+root: ..
+sources:
+  - dataset_name: harmbench
+    dataset_split: validation
+    path: data/raw/harmbench/text_val.csv
+    source_url: https://raw.githubusercontent.com/centerforaisafety/HarmBench/main/data/behavior_datasets/harmbench_behaviors_text_val.csv
+    expected_record_count: 80
+    retrieved_commit: null
+  - dataset_name: harmbench
+    dataset_split: test
+    path: data/raw/harmbench/text_test.csv
+    source_url: https://raw.githubusercontent.com/centerforaisafety/HarmBench/main/data/behavior_datasets/harmbench_behaviors_text_test.csv
+    expected_record_count: 320
+    retrieved_commit: null
+  - dataset_name: strongreject
+    dataset_split: unspecified
+    path: data/raw/strongreject/full.csv
+    source_url: https://raw.githubusercontent.com/alexandrasouly/strongreject/main/strongreject_dataset/strongreject_dataset.csv
+    expected_record_count: 313
+    retrieved_commit: null

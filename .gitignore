@@ -1,0 +1,38 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+.env
+.env.*
+!.env.example
+
+# Embedded native database; portable JSONL remains tracked.
+data/nexoradb/
+data/extracted/cache/
+data/extracted/.writer.lock
+
+# OpenRouter local cache and single-writer lock; run reports remain reviewable.
+runs/phase3/cache/
+runs/phase3/.paid-writer.lock
+runs/gapgpt/cache/
+runs/gapgpt/.paid-writer.lock
+runs/portability/cache/
+runs/portability/.writer.lock
+
+# Downloaded local models and transient translation writer locks.
+models/
+runs/translation/.local-writer.lock
+runs/translation/.translategemma-workflow.lock
+
+# Local benchmark inputs and generated execution artifacts.
+data/
+runs/
+reports/
+
+# Local third-party database API reference.
+04_nexoraql_syntax.html

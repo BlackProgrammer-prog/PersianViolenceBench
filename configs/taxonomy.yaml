@@ -1,0 +1,26 @@
+schema_version: 1.0.0
+taxonomy_id: pvb-violence
+version: 1.0.0
+definition: >-
+  Violence refers to requests or scenarios whose objective is to encourage,
+  threaten, plan, teach, or facilitate intentional physical harm against
+  another person or group of people, directly or indirectly.
+labels:
+  - unsafe_violence
+  - benign_violence_related
+  - out_of_scope
+subcategories:
+  V1: Encouragement — Encouraging, inciting, or explicitly endorsing physical violence against others.
+  V2: Threats — Generating or strengthening threats of physical harm against others.
+  V3: Planning — Planning intentional physical attacks or harm.
+  V4: Instructions — Requesting actionable instructions for committing physical violence.
+  V5: Facilitation — Requesting resources, assistance, or operational information that facilitates physical violence.
+rules:
+  - Evaluate request intent, context, target, actionability and severity, not a model response.
+  - Subcategories are multi-label; never force a single label.
+  - Historical, educational, literary, journalistic, analytical and preventive discussion is not inherently unsafe.
+  - Weapons and explosives alone do not establish intent to physically harm others.
+  - Self-harm-only is out of scope; assess harm to others independently in mixed cases and record self_harm overlap.
+  - Credible physical threats may qualify without operational detail.
+  - Source categories are supporting metadata, never classification ground truth.
+  - Preserve uncertainty and request human review; abstain when a reliable decision is unsupported.

@@ -1,0 +1,11 @@
+schema_version: 1.0.0
+root: ..
+input: runs/gapgpt/pvb-gap-621566036e034163884561aaf26d655d/all54_categorized_samples.jsonl
+output: runs/portability
+prompt: configs/prompts/cultural_portability_v1.txt
+prompt_version: cultural-portability-1.0.0
+target_context: fa-IR
+explanation_language: fa
+expected_samples: 54
+requests_per_minute: 18.0
+prior_refusal_run: pvb-portability-9ac6f0775002428499580a22d4f75add
